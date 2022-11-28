@@ -8,12 +8,13 @@ python:
 cache: pip
 
 before_install:
+  - export default_path=pwd
   - cd ~
   - git clone https://github.com/evgkanias/sky
   - cd sky
   - pip install -r requirements.txt
   - pip install .
-  - cd ~
+  - cd $default_path
 
 install:
   - pip install -r requirements.txt
