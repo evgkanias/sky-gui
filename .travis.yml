@@ -8,13 +8,13 @@ python:
 cache: pip
 
 before_install:
-  - export default_path=pwd
-  - cd ~
+  - cd ..
   - git clone https://github.com/evgkanias/sky
   - cd sky
   - pip install -r requirements.txt
   - pip install .
-  - cd $default_path
+  - cd ..
+  - cd sky-gui
 
 install:
   - pip install -r requirements.txt
