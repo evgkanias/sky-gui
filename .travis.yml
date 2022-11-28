@@ -1,0 +1,16 @@
+dist: focal
+
+language: python
+
+python:
+  - "3.9"
+
+cache: pip
+
+install:
+  - pip install -r requirements.txt
+  - pip install .
+
+script:
+  - cd examples
+  - python run_gui.pyw
