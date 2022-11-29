@@ -1,4 +1,4 @@
-from sky.prague.prague import PragueSkyModel, AvailableData
+from sky.prague.prague import PragueSkyModelManager, AvailableData
 from sky.prague.render import render, image2texture, pixel2dir
 from sky.prague.render import SPECTRUM_CHANNELS, SPECTRUM_WAVELENGTHS, SPECTRUM_STEP, MODES
 
@@ -323,7 +323,7 @@ class SkyModelGUI:
                                 icon=self.icon.getvalue(),
                                 grab_anywhere_using_control=True)
 
-        self.sky = PragueSkyModel()
+        self.sky = PragueSkyModelManager()
 
         self.draw_figure(rgb_init)
 
