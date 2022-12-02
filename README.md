@@ -1,10 +1,11 @@
-# Skylight Simulation GUI ![GitHub top language](https://img.shields.io/github/languages/top/evgkanias/sky-gui) [![GitHub license](https://img.shields.io/github/license/evgkanias/sky-gui)](https://github.com/evgkanias/sky-gui/blob/main/LICENSE) ![GitHub last-commit](https://img.shields.io/github/last-commit/evgkanias/sky-gui) ![Build Status](https://app.travis-ci.com/evgkanias/sky-gui.svg?branch=main)
+# Graphical User Interface (GUI) for models of skylight ![GitHub top language](https://img.shields.io/github/languages/top/evgkanias/sky-gui) [![GitHub license](https://img.shields.io/github/license/evgkanias/sky-gui)](https://github.com/evgkanias/sky-gui/blob/main/LICENSE) ![GitHub last-commit](https://img.shields.io/github/last-commit/evgkanias/sky-gui) ![Build Status](https://app.travis-ci.com/evgkanias/sky-gui.svg?branch=main)
 
 ![Rendered GUI](docs/gui-1.png)
 
-Python simulations of the skylight information based on the
-[Vévoda et al. (2022)](https://cgg.mff.cuni.cz/publications/infrared-skymodel-2022/) Prague Sky Model.
-This contains a Python implementation of the Prague Sky Model 2022 including a copy of their GUI (original C++ code
+This (Python-based) GUI allows for interactive exploration of the skylight information provided by the different models.
+The GUI is based on the one implemented by
+[Vévoda et al. (2022)](https://cgg.mff.cuni.cz/publications/infrared-skymodel-2022/) for their Prague Sky Model
+(original C++ code
 [here](https://cgg.mff.cuni.cz/wp-content/uploads/2022/09/vevoda_2022_infrared_sky_implementation.zip)).
 There are three available datasets that work with this model, which can be downloaded form here:
 * [Google Drive with the near-infrared (SWIR) dataset](https://drive.google.com/file/d/1ZOizQCN6tH39JEwyX8KvAj7WEdX-EqJl/view?usp=sharing)
@@ -14,15 +15,13 @@ There are three available datasets that work with this model, which can be downl
 * [Google Drive with the hemispherical model](https://drive.google.com/drive/folders/1R9dTbOhBXthY3y9BTI4H28acl9dJLIaV?usp=sharing)
   (omits polarisation data and different altitudes)
 
-The SWIR dataset can also be found in the [data](data) directiory of this repository.
-
 ## Installation
 
 In order to install the package and reproduce the results of the manuscript you need to clone
 the code, navigate to the main directory of the project, install the dependencies and finally
 the package itself. Here is an example code that installs the package:
 
-1. Install [sky](https://github.com/evgkanias/sky) using the instructions from
+1. Install the [sky](https://github.com/evgkanias/sky) package by using the instructions from
 [here](https://github.com/evgkanias/sky/#readme).
 
 2. Clone this repo.
@@ -69,7 +68,7 @@ This will open the GUI which should look like this:
 
 By clicking the file-name filed, you can choose the dataset file, which will load automatically.
 Once loaded, you can click "Render" (or choose the auto-update option) and this will print an image
-of the sky radiance, sun radiance, degree of polarisation, or transmittance (depending on the
+of the sky radiance, sun radiance, degree of polarisation, transmittance, or angle of polarisation (depending on the
 rendering mode), as shown below:
 
 ![Rendered GUI](docs/gui-1.png)
