@@ -13,4 +13,4 @@ requires = [
     "matplotlib>=3.6.2",
     "pysimplegui>=4.60.4",
 ]
-build-backed = "setuptools.build_meta"
+build-backend = "setuptools.build_meta"
