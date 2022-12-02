@@ -14,7 +14,7 @@ setuptools.setup(
     maintainer="Evripidis Gkanias",
     author_email="ev.gkanias@ed.ac.uk",
     maintainer_email="ev.gkanias@ed.ac.uk",
-    description="A package providing a GUI for the sky package.",
+    description="A package providing a GUI for the skylight package.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/evgkanias/sky-gui",

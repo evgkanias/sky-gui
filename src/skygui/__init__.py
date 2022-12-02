@@ -10,8 +10,8 @@ __license__ = "GPLv3+"
 __version__ = "v1.0-beta"
 __maintainer__ = "Evripidis Gkanias"
 
-from sky import PragueSky, AvailableData, SPECTRUM_CHANNELS, SPECTRUM_WAVELENGTHS, SPECTRUM_STEP, MODES
-from sky.render import render_pixels, image2texture, pixel2dir
+from skylight import PragueSky, AvailableData, SPECTRUM_CHANNELS, SPECTRUM_WAVELENGTHS, SPECTRUM_STEP, MODES
+from skylight.render import render_pixels, image2texture, pixel2dir
 
 from PIL import Image
 
