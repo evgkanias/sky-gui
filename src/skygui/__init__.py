@@ -1,6 +1,17 @@
-from sky.prague.prague import PragueSkyModelManager, AvailableData
-from sky.prague.render import render, image2texture, pixel2dir
-from sky.prague.render import SPECTRUM_CHANNELS, SPECTRUM_WAVELENGTHS, SPECTRUM_STEP, MODES
+"""
+Package that creates the GUI.
+"""
+
+__author__ = "Evripidis Gkanias"
+__copyright__ = "Copyright (c) 2022, Insect Robotics Group," \
+                "School of Informatics, the University of Edinburgh"
+__credits__ = ["Evripidis Gkanias"]
+__license__ = "GPLv3+"
+__version__ = "v1.0-beta"
+__maintainer__ = "Evripidis Gkanias"
+
+from sky import PragueSky, AvailableData, SPECTRUM_CHANNELS, SPECTRUM_WAVELENGTHS, SPECTRUM_STEP, MODES
+from sky.render import render_pixels, image2texture, pixel2dir
 
 from PIL import Image
 
@@ -323,7 +334,7 @@ class SkyModelGUI:
                                 icon=self.icon.getvalue(),
                                 grab_anywhere_using_control=True)
 
-        self.sky = PragueSkyModelManager()
+        self.sky = PragueSky()
 
         self.draw_figure(rgb_init)
 
@@ -441,7 +452,12 @@ class SkyModelGUI:
             rgb_ = np.transpose(rgb, axes=(1, 2, 0))
         else:
             rgb_ = rgb
-        text = image2texture(rgb_, float(exposure))
+
+        if "mode" in self.values and MODES.index(self.values["mode"].lower()) == 4:
+            exposure = None
+        else:
+            exposure = float(exposure)
+        text = image2texture(rgb_, exposure)
 
         self.img_tmp = Image.fromarray(np.transpose(text, axes=(1, 0, 2)), mode="RGBA")
         img_resize = self.img_tmp.resize((600, 600))
@@ -505,14 +521,15 @@ class SkyModelGUI:
         self.is_rendering = True
         start = time.time()
         try:
-            self.result = render(sky_model=self.sky,
-                                 albedo=float(self.values["albedo"]),
-                                 altitude=float(self.values["altitude"]),
-                                 azimuth=np.deg2rad(self.values["azimuth"]),
-                                 elevation=np.deg2rad(self.values["elevation"]),
-                                 visibility=float(self.values["visibility"]),
-                                 resolution=int(self.values["resolution"]),
-                                 mode=self.values["mode"])
+            self.sky.theta_s = np.deg2rad(self.values["elevation"])
+            self.sky.phi_s = np.deg2rad(self.values["azimuth"])
+            self.result = render_pixels(sky_model=self.sky,
+                                        albedo=float(self.values["albedo"]),
+                                        altitude=float(self.values["altitude"]),
+                                        visibility=float(self.values["visibility"]),
+                                        resolution=int(self.values["resolution"]),
+                                        mode=self.values["mode"])
+            self.default_mode = MODES.index(self.values["mode"].lower())
             self.rendering_success = True
             self.rendering_error = None
         except Exception as e:

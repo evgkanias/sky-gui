@@ -8,8 +8,9 @@ dependencies:
   - numpy>=1.23.4
   - matplotlib>=3.6.2
   - numba>=0.56.3
+  - pyyaml>=6.0
+  - pytz~=2021.1
+  - requests>=2.9.2
   - pandas>=1.5.1
   - pillow>=9.2.0
   - pysimplegui>=4.60.4
-  - pyyaml>=6.0
-  - pytz~=2021.1
