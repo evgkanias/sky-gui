@@ -17,12 +17,19 @@ There are three available datasets that work with this model, which can be downl
 
 ## Installation
 
-In order to install the package and reproduce the results of the manuscript you need to clone
-the code, navigate to the main directory of the project, install the dependencies and finally
+You can easily install the package by using pip as:
+```commandline
+pip install git+https://github.com/evgkanias/sky-gui.git
+```
+
+Alternatively you need to clone the GitHub repository, navigate to the main directory of the project, install the dependencies and finally
 the package itself. Here is an example code that installs the package:
 
 1. Install the [sky](https://github.com/evgkanias/sky) package by using the instructions from
-[here](https://github.com/evgkanias/sky/#readme).
+[here](https://github.com/evgkanias/sky/#readme), or run:
+```commandline
+pip install git+https://github.com/evgkanias/sky.git
+```
 
 2. Clone this repo.
 ```commandline
