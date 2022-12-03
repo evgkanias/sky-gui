@@ -8,3 +8,4 @@ pillow>=9.2.0
 pandas>=1.5.1
 matplotlib>=3.6.2
 pysimplegui>=4.60.4
+skylight

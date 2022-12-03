@@ -7,9 +7,6 @@ python:
 
 cache: pip
 
-before_install:
-  - pip install git+https://github.com/evgkanias/sky
-
 install:
   - pip install -r requirements.txt
   - pip install .
