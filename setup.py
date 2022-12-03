@@ -28,15 +28,18 @@ setuptools.setup(
         "Programming Language :: Python :: 3.9",
         "Intended Audience :: Science/Research",
         "Topic :: Scientific/Engineering :: Atmospheric Science",
-        "Licence :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
-        "Operating System :: Microsoft :: Windows :: Windows 11"
+        "Operating System :: Microsoft :: Windows :: Windows 11",
+        "Topic :: Scientific/Engineering :: Visualization"
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    package_data={'': [os.path.join('data', 'PragueSkyModelDatasetGroundInfra.dat'),
-                       os.path.join('data', 'icon.png')]
-                  },
+    package_data={'': [
+        "README.md",
+        os.path.join('data', 'PragueSkyModelDatasetGroundInfra.dat'),
+        os.path.join('data', 'icon.png')]
+    },
     install_requires=requirements,
     python_requires=">=3.9",
 )
