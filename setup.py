@@ -8,13 +8,13 @@ with open("requirements.txt", "r", encoding="utf-8") as fr:
     requirements = fr.read().splitlines()
 
 setuptools.setup(
-    name="skylight-gui",
+    name="skylight_gui-gui",
     version="v1.0b1",
     author="Evripidis Gkanias",
     maintainer="Evripidis Gkanias",
     author_email="ev.gkanias@ed.ac.uk",
     maintainer_email="ev.gkanias@ed.ac.uk",
-    description="A package providing a GUI for the skylight package.",
+    description="A package providing a GUI for the skylight_gui package.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/evgkanias/sky-gui",

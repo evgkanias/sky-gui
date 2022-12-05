@@ -65,7 +65,7 @@ Note that the [pip](https://pypi.org/project/pip/) project might be needed for t
 To run the GUI, open a Python terminal and run the below.
 
 ```python
-from skygui import SkyModelGUI
+from skylight_gui import SkyModelGUI
 
 gui = SkyModelGUI()
 gui()
