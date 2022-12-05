@@ -9,7 +9,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fr:
 
 setuptools.setup(
     name="skylight-gui",
-    version="v1.0b3",
+    version="v1.0b4",
     author="Evripidis Gkanias",
     maintainer="Evripidis Gkanias",
     author_email="ev.gkanias@ed.ac.uk",
