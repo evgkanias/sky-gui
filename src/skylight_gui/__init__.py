@@ -25,13 +25,15 @@ import io
 # use theme
 sg.theme("DarkBlack")
 
+ICON_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "data", "icon.png"))
+
 
 class SkyModelGUI:
 
     def __init__(self):
 
         # load icon
-        icon_img: Image = Image.open(os.path.abspath(os.path.join("", "data", "icon.png")))
+        icon_img: Image = Image.open(ICON_PATH)
         self.icon = io.BytesIO()
         icon_img.save(self.icon, format="PNG")
 

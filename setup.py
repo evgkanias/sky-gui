@@ -35,9 +35,7 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    package_data={'': [
-        "README.md",
-        os.path.join('data', 'PragueSkyModelDatasetGroundInfra.dat'),
+    package_data={'skylight_gui': [
         os.path.join('data', 'icon.png')]
     },
     install_requires=requirements,
