@@ -1,4 +1,4 @@
-name: skygui
+name: skylight-gui
 channels:
   - conda-forge
 dependencies:

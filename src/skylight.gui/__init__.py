@@ -102,7 +102,7 @@ class SkyModelGUI:
                           file_types=(
                                          ("DAT Files", "*.dat *.data"),
                                      ) + sg.FILE_TYPES_ALL_FILES,
-                          initial_folder=os.path.join("../../../skygui/src", "data"),
+                          initial_folder=os.path.join("../../../skylight.gui/src", "data"),
                           enable_events=True,
                           target=(1, 0),
                           border_width=0,

@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fr:
     requirements = fr.read().splitlines()
 
 setuptools.setup(
-    name="skygui",
+    name="skylight-gui",
     version="v1.0b1",
     author="Evripidis Gkanias",
     maintainer="Evripidis Gkanias",
